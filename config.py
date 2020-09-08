@@ -1,8 +1,9 @@
 import genanki
 from selenium import webdriver
 
-test_deck_id = 12319798374982316
+songang_korean_students_book_deck_id = 1231979823374982316
 hangul_model_id = 283473298476
+download_dir = "F:\Python\PycharmProjects\GenerateAnki\AudioFiles"
 model = genanki.Model(hangul_model_id, 'Hangul + Audio 한글',
                       fields=[
                           {'name': 'Question'},
@@ -27,4 +28,4 @@ FIREFOX_PREFERENCES = {
 }
 fx_profile = webdriver.FirefoxProfile()
 fx_profile.default_preferences.update(FIREFOX_PREFERENCES)
-fx_profile.set_preference("browser.download.dir", 'F:\Python\PycharmProjects\GenerateAnki\AudioFiles')
+fx_profile.set_preference("browser.download.dir", download_dir)
